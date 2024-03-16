@@ -28,13 +28,22 @@
             <input type="email">
             <label>Senha:</label>
             <input type="password">
+
+            <?php
+                if (isset($_SESSION["mensagem"])) {
+            ?>
+            <div class="alert alert-warning" role="alert">
+                <strong>ERRO:</strong>
+                <?php
+                    echo $_SESSION["mensagem"];
+                    # unset $_SESSION["mensagem"];
+                ?>
+            </div>
+            <?php } ?>
+
             <input type="submit" id="button">
             <br><a href="../index.php">Início</a>
         </form>
-
-        <?php
-        
-        ?>
     </div>
 </body>
 </html>
