@@ -1,14 +1,22 @@
 <?php
-class Categoria {
+class Usuario {
+    private $id;
+    private $nome;
     private $login;
     private $senha;
 
-    function __construct(
-        $login,
-        $senha,
-    ){
-        $this->login
-        $this->senha;
+    function getId(){
+        return $this->id;
+    }
+    function setId($id){
+        $this->id = $id;
+    }
+
+    function getNome(){
+        return $this->nome;
+    }
+    function setNome($nome){
+        $this->nome = $nome;
     }
 
     function getLogin(){
@@ -17,11 +25,11 @@ class Categoria {
     function setLogin($login){
         $this->login = $login;
     }
-
     function getSenha(){
         return $this->senha;
     }
     function setSenha($senha){
         $this->senha = $senha;
     }
+    
 }
